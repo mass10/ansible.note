@@ -1,0 +1,42 @@
+---
+  - hosts: localhost
+    become: yes
+    become_method: sudo
+    tasks:
+
+      - name: install Apache 2
+        yum:
+            name: httpd
+            state: latest
+
+      - name: install
+        yum:
+            name: php70
+            state: latest
+
+      - name: install
+        yum:
+            name: php70-zip
+            state: latest
+
+      - name: install
+        yum:
+            name: php70-mbstring
+            state: latest
+
+      - name: install
+        yum:
+            name: php70-pdo
+            state: latest
+
+      - name: install
+        yum:
+            name: php70-xml
+            state: latest
+
+      - name: install
+        yum:
+            name: mod24_ssl
+            state: latest
+
+
