@@ -1,0 +1,16 @@
+---
+  - hosts: localhost
+    become: yes
+    become_method: sudo
+    tasks:
+
+      - name: remove default Apache
+        yum:
+            name: httpd-tools
+            state: absent
+
+      - name: remove default Apache
+        yum:
+            name: httpd
+            state: absent
+
