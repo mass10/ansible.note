@@ -1,0 +1,13 @@
+---
+  - hosts: localhost
+    become: yes
+    become_method: sudo
+    tasks:
+
+      - name: create directory
+        file: dest=/tmp/AAA state=directory owner=root group=root mode=0755
+
+      - name: create directory
+        file: dest=/tmp/BBB state=directory owner=apache group=apache mode=0755
+
+
